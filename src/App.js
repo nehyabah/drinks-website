@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
+//import "./App.css";
 import HomePage from "./pages/HomePage/Homepage.component";
 import MenuPage from "./pages/MenuPage/MenuPage.component";
 import Form from "./components/Forms/Form";

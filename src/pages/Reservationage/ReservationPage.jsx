@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCalendar, faUser } from "@fortawesome/free-solid-svg-icons";
 import styles from "./ReservationPage.module.css";
 import { Button } from "react-bootstrap";
 const occation = [
@@ -10,15 +12,35 @@ const occation = [
 ];
 export default function ReservationPage() {
   const topComponent = (
-    <div className={styles.top}>
-      <h1>Reservation Booked</h1>
-      <p>Please check your inbox for a confirmation email</p>
-    </div>
+    <>
+      <div className={styles.top}>
+        <h1>Reservation Booked</h1>
+        <p>Please check your inbox for a confirmation email</p>
+      </div>
+
+      <div className={styles.infoContainer}>
+        <div className={styles.imganddetails}>
+          <img
+            src="https://res.cloudinary.com/kxnxchukwu/image/upload/v1689113410/rectangle-32_2x_wvklz8.png"
+            alt=""
+            className={styles.image}
+          />
+        </div>
+        <div className={styles.details}>
+          <h3 className={styles.h3Style}>Atlantis</h3>
+          <p>Bar • Lounge • Shisha</p>
+          <faCalendar />
+          <p>Fri, Jun 30 2023 7:45PM</p>
+          <faUser />
+          <p>2 Guests, Dining Room</p>
+        </div>
+      </div>
+    </>
   );
 
   const buttonsComponent = (
     <div className={`${styles.button} d-grid gap-2`}>
-      <h1>What is the occation?</h1>
+      <h1 className={`${styles.title}`}>What is the occation?</h1>
       <h3>Celebrating Something Special?</h3>
       {occation.map(({ id, name }, index) => {
         return (
