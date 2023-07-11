@@ -1,0 +1,96 @@
+.splitScreen {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.topPane {
+  flex: 1;
+  background: url("https://res.cloudinary.com/kxnxchukwu/image/upload/v1689091253/iphone-14-pro--1_3x_rzfeho.png")
+    no-repeat center center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px;
+  color: white;
+}
+
+.bottomPane {
+  flex: 1;
+  background: url("https://res.cloudinary.com/kxnxchukwu/image/upload/v1689091275/unsplashpoi7delfiva_2x_g82rfo.png")
+    no-repeat center center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+  width: 100px;
+}
+
+.underLogoTextContainer {
+  margin-top: 10px;
+  width: 194px;
+  height: 16px;
+}
+
+.underLogoText {
+  font-family: Baskerville;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.205em;
+  text-align: left;
+}
+
+.callToActionContainer {
+  margin-top: 50px;
+  width: 226px;
+  height: 155px;
+}
+
+.callToAction {
+  font-family: Baskerville;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.bookButton {
+  width: 112px;
+  height: 38px;
+  padding: 10px 30px;
+  border-radius: 6px;
+  background-color: white;
+  color: black;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bookButton:hover {
+  background-color: black;
+  color: white;
+}
+
+.backgroundImage {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}

@@ -1,39 +1,25 @@
-.menuContainer {
-    width: 116px;
-    height: 55px;
-    top: 26px;
-    left: 17px;
-    position: relative;
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  justify-items: center;
+  padding: 20px;
 }
 
-.menuText {
-font-family: Baskerville;
-font-size: 48px;
-font-weight: 400;
-line-height: 55px;
-letter-spacing: 0em;
-text-align: left;
+.gridItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.menuButtonContainer {
-    position: relative;
-    margin: auto;
-    margin-top: 35px;
-    left: 40px
+.image {
+  width: 178px;
+  height: 277px;
+  border-radius: 6px;
+  object-fit: cover;
 }
 
-.menuButton {
-font-family: Baskerville;
-font-size: 21px;
-font-weight: 400;
-line-height: 24px;
-letter-spacing: 0em;
-text-align: left;
-background: linear-gradient(180deg, #D6FAA9 35.94%, #00A1FF 100%);
-}
-
-.menuDrinkContainer {
-    position: relative;
-    margin-top: 35px;
-    right: 10px;
+.imageCaption {
+  text-align: center;
+  margin-top: 10px;
 }
