@@ -4,10 +4,6 @@ import styles from "./Form.module.css";
 const Form = () => {
   return (
     <div className={styles.container}>
-      <div className={styles.hamburgerMenu}>
-        {/* Insert your hamburger menu component here */}
-      </div>
-
       <div className={styles.formContainer}>
         <form>
           <h3>Enter details</h3>
