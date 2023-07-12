@@ -1,4 +1,3 @@
-import DrinkContainer from "../../components/DrinkContainer/DinkContainer";
 import styles from "./MenuPage.module.css";
 
 const drinks = [
@@ -26,23 +25,39 @@ const drinks = [
 
 export default function MenuPage() {
   return (
-    <div>
-      <div className={styles.gridContainer}>
-        <h1 className={styles.menuText}>Menu</h1>
+    <div
+      style={{
+        backgroundImage: `url('https://res.cloudinary.com/kxnxchukwu/image/upload/v1689156103/iphone-14--4_3x_hxnmni.png')`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center center",
+        backgroundAttachment: "fixed",
+        backgroundSize: "cover",
+        minHeight: "100vh",
+        minWidth: "100vw",
+        overflow: "auto",
+      }}
+    >
+      <div>
+        <h1 className={styles.menu}>Menu</h1>
       </div>
 
-      <div
-        className={`d-flex justify-content-around ${styles.menuButtonContainer}`}
-      >
-        <button className={`${styles.menuButton}`}>Bottles and Drinks</button>
-        <button className={`${styles.menuButton}`}>Shisha</button>
+      <div className={styles.buttons}>
+        <button className={styles.button}>Bottles and Drinks</button>
+        <button className={styles.button}>Shisha</button>
       </div>
 
-      <div className={styles.menuDrinkContainer}>
-        {drinks.map(({ imageUrl, name }, index) => {
-          return <DrinkContainer key={index} imageUrl={imageUrl} name={name} />;
-        })}
-      </div>
+      <di className={styles.container}>
+        {drinks.map((drink, index) => (
+          <div key={index}>
+            <img
+              src={drink.imageUrl}
+              alt={drink.name}
+              className={styles.image}
+            />
+            <h2 className={styles.name}>{drink.name}</h2>
+          </div>
+        ))}
+      </di>
     </div>
   );
 }

@@ -1,0 +1,35 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* This ensures your page will cover the whole vertical space of the viewport */
+}
+
+.hamburgerMenu {
+  /* Your hamburger menu styles here */
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* This will allow this div to take up remaining space after hamburger menu */
+}
+
+form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  align-items: left;
+  background: linear-gradient(
+    180deg,
+    rgba(214, 250, 169, 0.2) 35.94%,
+    rgba(0, 161, 255, 0.2) 100%
+  );
+}
+
+.cancellation {
+  flex: 1;
+  /* Add other styles as required */
+}
