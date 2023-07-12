@@ -4,10 +4,6 @@
   height: 100vh; /* This ensures your page will cover the whole vertical space of the viewport */
 }
 
-.hamburgerMenu {
-  /* Your hamburger menu styles here */
-}
-
 .formContainer {
   display: flex;
   flex-direction: column;

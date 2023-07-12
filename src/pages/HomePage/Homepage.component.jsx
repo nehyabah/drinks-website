@@ -26,7 +26,7 @@ const Homepage = () => {
       </div>
 
       <div className={styles.bottom}>
-        <button className={styles.button}>Book</button>
+        <button className={styles.button}>Book Now</button>
       </div>
     </div>
   );

@@ -48,5 +48,13 @@
 }
 
 .button {
+  width: 30%;
+  height: 2.7rem;
+  background: #1c1d1b;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-family: berksville;
+  font-size: 1.2rem;
   /* add your button styles here */
 }

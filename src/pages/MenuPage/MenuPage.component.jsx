@@ -25,18 +25,7 @@ const drinks = [
 
 export default function MenuPage() {
   return (
-    <div
-      style={{
-        backgroundImage: `url('https://res.cloudinary.com/kxnxchukwu/image/upload/v1689156103/iphone-14--4_3x_hxnmni.png')`,
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center center",
-        backgroundAttachment: "fixed",
-        backgroundSize: "cover",
-        minHeight: "100vh",
-        minWidth: "100vw",
-        overflow: "auto",
-      }}
-    >
+    <div className={styles.maindiv}>
       <div>
         <h1 className={styles.menu}>Menu</h1>
       </div>
