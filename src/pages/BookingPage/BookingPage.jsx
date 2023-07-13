@@ -12,10 +12,14 @@ import DatePicker, { TimePicker } from "sassy-datepicker";
 import styles from "./BookingPage.module.css";
 
 const topComponent = (
-  <div className={styles.topComp}>
-    <button className={styles.button1}>VIP</button>
-    <button className={styles.button2}>Private</button>
-    <button className={styles.button3}>Regular</button>
+  <div className={`${styles.topComp} flex-column`}>
+    <div className="d-flex justify-content-center">
+      <button className={styles.button1}>VIP</button>
+    </div>
+    <div className="d-flex align-items-start justify-content-around">
+      <button className={styles.button2}>Private</button>
+      <button className={styles.button3}>Regular</button>
+    </div>
   </div>
 );
 

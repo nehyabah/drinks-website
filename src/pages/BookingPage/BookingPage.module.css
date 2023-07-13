@@ -1,18 +1,11 @@
 .topComp {
-  display: grid;
-  grid-template-rows: 70px auto; /* Adjusted grid row heights */
-  grid-template-columns: repeat(
-    10,
-    1fr
-  ); /* Updated grid column configuration for mobile */
-
-  gap: 0rem; /* No gap between the buttons */
+  display: flex;
   background: linear-gradient(
     180deg,
     rgba(214, 250, 169, 0.2) 35.94%,
     rgba(0, 161, 255, 0.2) 100%
   );
-  height: 200px;
+  height: 270px;
 }
 
 .topComp button {
@@ -24,31 +17,25 @@
   height: 45px;
   color: white;
   cursor: pointer;
-  margin-top: 3.5rem;
+  margin-top: 1.5rem;
 }
 
 .button1 {
+  margin-top: 3.5rem;
   background-color: #008cba;
-  grid-row-start: 1;
-  grid-row-end: 2;
-  grid-column-start: 3;
-  grid-column-end: 4;
 }
 
 .button2 {
-  background-color: #007b9a;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 2;
-  grid-column-end: 3;
+  margin-top: 1.75rem;
+  background-color: #008cba;
+  align-items: flex-start;
+  border-radius: 6px;
 }
 
 .button3 {
+  margin-top: 1.75rem;
   background-color: #007b9a;
-  grid-row-start: 2;
-  grid-row-end: 3;
-  grid-column-start: 4;
-  grid-column-end: 5;
+  border-radius: 6px;
 }
 
 .topComp button:hover {

@@ -1,23 +1,25 @@
 .container {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  height: 100vh; /* This ensures your page will cover the whole vertical space of the viewport */
+  height: 100vh;
+  overflow: hidden; /* Hide any content that exceeds the viewport height */
 }
 
-.formContainer {
+.first,
+.second {
+  flex: 1;
   display: flex;
+
   flex-direction: column;
-  flex: 1; /* This will allow this div to take up remaining space after hamburger menu */
+  justify-content: center;
+  align-items: center;
 }
 
 form {
-  flex: 1;
   display: flex;
   flex-direction: column;
-  padding-left: 2rem;
-  padding-right: 2rem;
-
-  align-items: left;
+  padding: 1rem;
   background: linear-gradient(
     180deg,
     rgba(214, 250, 169, 0.2) 35.94%,
@@ -25,7 +27,82 @@ form {
   );
 }
 
-.cancellation {
-  flex: 1;
-  /* Add other styles as required */
+form h3 {
+  font-size: 20px;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+form label {
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+
+form input {
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 14px;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  margin-top: 0.25rem;
+}
+
+form p {
+  font-size: 12px;
+  line-height: 1.5;
+  margin-top: 1rem;
+  text-align: justify;
+}
+
+form button {
+  width: 40%;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: #008cba;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.fitst {
+  height: 405px;
+}
+
+.second {
+  display: flex;
+
+  margin-left: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2rem;
+  height: 432.72px;
+  margin: 20px;
+}
+
+.second > div {
+  flex: 1 0 100%;
+  max-width: 400px;
+  padding: 1rem;
+}
+
+.second h3 {
+  font-size: 18px;
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.second p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-top: 0;
+  text-align: justify;
 }
