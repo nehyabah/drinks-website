@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { Dropdown } from "react-bootstrap";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -22,26 +22,6 @@ const topComponent = (
     </div>
   </div>
 );
-
-function DateInput() {
-  const [date, setDate] = useState(new Date());
-
-  const onChange = (newDate) => {
-    setDate(newDate);
-  };
-
-  return <DatePicker onChange={onChange} value={date} />;
-}
-
-function TimeInput() {
-  const [time, setTime] = useState({ hours: 15, minutes: 30 });
-
-  const onChange = (newTime) => {
-    setTime(newTime);
-  };
-
-  return <TimePicker onChange={onChange} value={time} />;
-}
 
 const bottomComponent = (
   <div className={styles.drop}>
@@ -90,19 +70,36 @@ const footer = (
 );
 
 export default function BookingPage() {
+  const [date, setDate] = useState(new Date());
+  const [time, setTime] = useState({ hours: 15, minutes: 30 });
+  const timeRef = useRef(null);
+
+  if (!timeRef.current) {
+    timeRef.current = document.getElementById("time-picker");
+  }
+
+  const onDateChange = (newDate) => {
+    setDate(newDate);
+  };
+
+  const onTimeChange = (newTime) => {
+    setTime(newTime);
+  };
+
   return (
     <>
       {topComponent}
-      <div className="container d-flex justify-content-center">
-        <div>
-          <h3>Select Date</h3>
-          <DateInput />
-          <h3>Select Time</h3>
-          <TimeInput />
-          {bottomComponent}
-        </div>
-      </div>
-
+      <h3>Select Date</h3>
+      <DatePicker onChange={onDateChange} value={date} />
+      <h3>Select Time</h3>
+      <TimePicker
+        id="time-picker"
+        ref={timeRef}
+        onChange={onTimeChange}
+        value={time}
+        className="absolute mt-2"
+      />
+      {bottomComponent}
       {footer}
     </>
   );
