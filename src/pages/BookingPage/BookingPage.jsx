@@ -93,11 +93,16 @@ export default function BookingPage() {
   return (
     <>
       {topComponent}
-      <h3>Select Date</h3>
-      <DateInput />
-      <h3>Select Time</h3>
-      <TimeInput />
-      {bottomComponent}
+      <div className="container d-flex justify-content-center">
+        <div>
+          <h3>Select Date</h3>
+          <DateInput />
+          <h3>Select Time</h3>
+          <TimeInput />
+          {bottomComponent}
+        </div>
+      </div>
+
       {footer}
     </>
   );
