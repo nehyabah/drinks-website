@@ -25,7 +25,8 @@ const Form = () => {
 
   return (
     <div>
-      <div className="ccontainer-fluid m-4">
+      <div></div>
+      <div className="container-fluid m-4">
         <form onSubmit={handleSubmit}>
           <div>
             <h3>Enter Details</h3>
